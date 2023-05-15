@@ -10,7 +10,7 @@ import { RegisterDTO } from './auth.controller';
 import * as CryptoJS from 'crypto-js';
 
 @Injectable()
-export class AuthService {
+export class AuthSService {
   constructor(private prisma: PrismaService, private config: ConfigService) {}
 
   async register(dto: RegisterDTO) {

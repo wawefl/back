@@ -1,5 +1,5 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { AuthService } from './auth.service';
+import { AuthSService } from './auth.service';
 import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
 
 export class RegisterDTO {
@@ -22,7 +22,7 @@ export class RegisterDTO {
 
 @Controller('auth')
 export class AuthController {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthSService) {}
 
   @Post('register')
   register(@Body() dto: RegisterDTO) {
