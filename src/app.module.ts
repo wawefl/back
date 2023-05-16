@@ -9,6 +9,7 @@ import { AdminModule } from './admin/admin/admin.module';
 import { AuthAdminModule } from './admin/auth-admin/auth-admin.module';
 import { SchoolModule } from './admin/school/school.module';
 import { GradeModule } from './admin/grade/grade.module';
+import { StudentAdminModule } from './admin/student-admin/student-admin.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { GradeModule } from './admin/grade/grade.module';
     AuthAdminModule,
     SchoolModule,
     GradeModule,
+    StudentAdminModule,
   ],
   controllers: [AppController],
   providers: [AppService],

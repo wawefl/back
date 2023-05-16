@@ -31,15 +31,15 @@ model Grade {
 }
 
 model Student {
-  id       Int     @id @default(autoincrement())
-  fistName String
-  lastName String
-  email    String  @unique
-  name     String
-  password String
-  grade    Grade?  @relation(fields: [gradeId], references: [id])
-  gradeId  Int
-  scores   Score[]
+  id        Int     @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String  @unique
+  name      String
+  password  String
+  grade     Grade?  @relation(fields: [gradeId], references: [id])
+  gradeId   Int
+  scores    Score[]
 
   @@map("students")
 }
