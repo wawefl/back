@@ -10,6 +10,7 @@ import { AuthAdminModule } from './admin/auth-admin/auth-admin.module';
 import { SchoolModule } from './admin/school/school.module';
 import { GradeModule } from './admin/grade/grade.module';
 import { StudentAdminModule } from './admin/student-admin/student-admin.module';
+import { LessonAdminModule } from './admin/lesson/lesson-admin.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { StudentAdminModule } from './admin/student-admin/student-admin.module';
     SchoolModule,
     GradeModule,
     StudentAdminModule,
+    LessonAdminModule,
   ],
   controllers: [AppController],
   providers: [AppService],
