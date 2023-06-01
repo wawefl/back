@@ -18,7 +18,7 @@ export class StudentService {
     return this.prisma.student.findUnique({ where: { email } });
   }
 
-  async getStudent(id: number): Promise<Prisma.Prisma__StudentClient<any>> {
+  async getStudent(id: number): Promise<any> {
     return this.prisma.student.findUnique({ where: { id } });
   }
 

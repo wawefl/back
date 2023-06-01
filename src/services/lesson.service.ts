@@ -6,8 +6,8 @@ import { Prisma } from '@prisma/client';
 export class LessonService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async getAll() {
-    const lessons = await this.prisma.lesson.findMany();
+  async getAll(param?: any) {
+    const lessons = await this.prisma.lesson.findMany(param);
     if (!lessons) {
       throw new NotFoundException();
     }

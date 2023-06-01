@@ -5,23 +5,16 @@ import {
   Param,
   Post,
   Put,
-  Request,
-  Res,
-  UnauthorizedException,
+  UseGuards,
 } from '@nestjs/common';
-import { AuthService } from 'src/services/auth.service';
-import { JwtService } from '@nestjs/jwt';
-import { Response } from 'express';
-import { CreateAdminDto } from 'src/dto/admin.dto';
-import * as bcrypt from 'bcryptjs';
-import { SchoolService } from 'src/services/school.service';
-import { CreateSchoolDto } from 'src/dto/school.dto';
 import { GradeService } from 'src/services/grade.service';
+import { JwtGuard } from '../auth-admin/jwt.guard';
 
-@Controller('admin/grade')
+@Controller('commun/grade')
 export class GradeController {
   constructor(private gradeService: GradeService) {}
 
+  @UseGuards(JwtGuard)
   @Get()
   async getAll(): Promise<any> {
     return this.gradeService.getAll();
