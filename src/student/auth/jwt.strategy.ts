@@ -13,12 +13,12 @@ const cookieExtractor = function (req: Request) {
 };
 
 @Injectable()
-export class JwtAdminStrategy extends PassportStrategy(Strategy) {
+export class JwtStudentStrategy extends PassportStrategy(Strategy) {
   constructor() {
     super({
       jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),
       ignoreExpiration: false,
-      secretOrKey: config.get('jwtAdminSecret'),
+      secretOrKey: config.get('jwtStudentSecret'),
     });
   }
 

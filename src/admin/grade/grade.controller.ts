@@ -8,13 +8,13 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { GradeService } from 'src/services/grade.service';
-import { JwtGuard } from '../auth-admin/jwt.guard';
+import { JwtAdminGuard } from '../auth-admin/jwt.guard';
 
 @Controller('commun/grade')
 export class GradeController {
   constructor(private gradeService: GradeService) {}
 
-  @UseGuards(JwtGuard)
+  @UseGuards(JwtAdminGuard)
   @Get()
   async getAll(): Promise<any> {
     return this.gradeService.getAll();

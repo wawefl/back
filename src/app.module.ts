@@ -13,6 +13,7 @@ import { StudentAdminModule } from './admin/student-admin/student-admin.module';
 import { LessonAdminModule } from './admin/lesson/lesson-admin.module';
 import { LessonStudentModule } from './student/lesson/lesson-student.module';
 import { StudentModule } from './student/student/student.module';
+import { AuthStudentModule } from './student/auth/auth-student.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { StudentModule } from './student/student/student.module';
     PrismaModule,
     AdminModule,
     AuthAdminModule,
+    AuthStudentModule,
     SchoolModule,
     GradeModule,
     StudentAdminModule,

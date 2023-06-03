@@ -10,10 +10,10 @@ import {
 import { AuthService } from 'src/services/auth.service';
 import { JwtService } from '@nestjs/jwt';
 import { Response } from 'express';
-import { JwtAdminGuard } from './jwt.guard';
+import { JwtStudentGuard } from './jwt.guard';
 
-@Controller('admin/auth')
-export class AuthAdminController {
+@Controller('student/auth')
+export class AuthStudentController {
   constructor(
     private authService: AuthService,
     private jwtService: JwtService,
@@ -26,26 +26,25 @@ export class AuthAdminController {
     @Request() req,
   ): Promise<any> {
     try {
-      const admin = await this.authService.login(
+      const student = await this.authService.login(
         req.body.email,
         req.body.password,
-        true,
       );
-      console.log(admin);
+      console.log(student);
 
-      const jwtToken = this.getJwtToken(admin);
+      const jwtToken = this.getJwtToken(student);
       this.setTokenCookie(res, jwtToken);
 
       console.log(jwtToken);
       // return true;
-      return { admin: admin, token: jwtToken };
+      return { student: student, token: jwtToken };
     } catch (error) {
       console.log(error);
       throw new UnauthorizedException();
     }
   }
 
-  @UseGuards(JwtAdminGuard)
+  @UseGuards(JwtStudentGuard)
   @Get('user')
   async user(
     @Request() req,
@@ -59,7 +58,7 @@ export class AuthAdminController {
     return user;
   }
 
-  @UseGuards(JwtAdminGuard)
+  @UseGuards(JwtStudentGuard)
   @Post('logout')
   async logout(
     @Request() req,

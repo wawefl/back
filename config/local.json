@@ -1,5 +1,6 @@
 {
   "jwtAdminSecret": "mysecret",
+  "jwtStudentSecret": "mysecretstudent",
   "sessionLengthInDays": "7",
   "corsAuthorize": "http://localhost:4350"
 }
