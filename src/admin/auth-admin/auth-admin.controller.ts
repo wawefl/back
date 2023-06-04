@@ -75,7 +75,7 @@ export class AuthAdminController {
   }
 
   setTokenCookie(res: Response, token: string) {
-    res.cookie('token', token, {
+    res.cookie('tokenAdmin', token, {
       httpOnly: true,
       secure: false,
       sameSite: 'lax',
@@ -84,7 +84,7 @@ export class AuthAdminController {
   }
 
   removeTokenCookie(res: Response) {
-    res.cookie('token', '', {
+    res.cookie('tokenAdmin', '', {
       maxAge: -1,
       path: '/',
       httpOnly: true,

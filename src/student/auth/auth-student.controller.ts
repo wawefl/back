@@ -74,7 +74,7 @@ export class AuthStudentController {
   }
 
   setTokenCookie(res: Response, token: string) {
-    res.cookie('token', token, {
+    res.cookie('tokenStudent', token, {
       httpOnly: true,
       secure: false,
       sameSite: 'lax',
@@ -83,7 +83,7 @@ export class AuthStudentController {
   }
 
   removeTokenCookie(res: Response) {
-    res.cookie('token', '', {
+    res.cookie('tokenStudent', '', {
       maxAge: -1,
       path: '/',
       httpOnly: true,

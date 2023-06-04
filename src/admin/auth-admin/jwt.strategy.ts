@@ -5,15 +5,18 @@ import { Request } from 'express';
 import * as config from 'config';
 
 const cookieExtractor = function (req: Request) {
-  let token = null;
+  let tokenAdmin = null;
   if (req && req.cookies) {
-    token = req.cookies['token'];
+    tokenAdmin = req.cookies['tokenAdmin'];
   }
-  return token;
+  return tokenAdmin;
 };
 
 @Injectable()
-export class JwtAdminStrategy extends PassportStrategy(Strategy) {
+export class JwtAdminStrategy extends PassportStrategy(
+  Strategy,
+  'jwtAdminSecret',
+) {
   constructor() {
     super({
       jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),
