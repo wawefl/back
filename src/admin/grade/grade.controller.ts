@@ -7,7 +7,7 @@ import {
   Put,
   UseGuards,
 } from '@nestjs/common';
-import { GradeService } from 'src/services/grade.service';
+import { GradeService } from '../../services/grade.service';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller('commun/grade')

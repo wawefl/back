@@ -2,11 +2,9 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { AdminService } from './admin.service';
 import { StudentService } from './student.service';
 import { AuthService } from './auth.service';
-import { PrismaService } from 'src/prisma/prisma.service';
 
 describe('AuthService', () => {
   let service: AuthService;
-  let prisma: PrismaService;
 
   const mockAdminService = {
     getAdminFromEmail: jest.fn(),
@@ -21,12 +19,12 @@ describe('AuthService', () => {
       providers: [
         AuthService,
         {
-          provide: AdminService,
-          useValue: mockAdminService,
-        },
-        {
           provide: StudentService,
           useValue: mockStudentService,
+        },
+        {
+          provide: AdminService,
+          useValue: mockAdminService,
         },
       ],
     }).compile();
