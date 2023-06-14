@@ -241,8 +241,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">src/admin/student-admin/student-admin.controller.ts:51</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/admin/student-admin/student-admin.controller.ts:57</a></div>
                 </td>
             </tr>
 
@@ -463,7 +463,13 @@ export class StudentAdminController {
         password: bcrypt.hashSync(body.password),
       };
     }
-    return this.studentService.updateStudent(body);
+    const id &#x3D; body.id;
+    delete body.id;
+    body &#x3D; {
+      ...body,
+      grade: { connect: { id: parseInt(body.grade) } },
+    };
+    return this.studentService.updateStudent(id, body);
   }
 
   @UseGuards(JwtAdminGuard)

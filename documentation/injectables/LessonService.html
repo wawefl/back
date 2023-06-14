@@ -394,7 +394,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>updateLesson(lesson)</code>
+                    <code>updateLesson(id, lesson)</code>
                 </td>
             </tr>
 
@@ -421,6 +421,15 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
                                 <tr>
                                     <td>lesson</td>
 
@@ -476,11 +485,11 @@ export class LessonService {
     return this.prisma.lesson.create({ data: lesson });
   }
 
-  async updateLesson(lesson) {
+  async updateLesson(id, lesson) {
     return this.prisma.lesson.update({
       data: lesson,
       where: {
-        id: lesson.id,
+        id: id,
       },
     });
   }

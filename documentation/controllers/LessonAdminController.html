@@ -241,8 +241,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/admin/lesson/lesson-admin.controller.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/admin/lesson/lesson-admin.controller.ts:47</a></div>
                 </td>
             </tr>
 
@@ -453,7 +453,13 @@ export class LessonAdminController {
   @UseGuards(JwtAdminGuard)
   @Put()
   async updateLesson(@Body() body): Promise&lt;any&gt; {
-    return this.lessonService.updateLesson(body);
+    const id &#x3D; body.id;
+    delete body.id;
+    body &#x3D; {
+      ...body,
+      grade: { connect: { id: parseInt(body.grade) } },
+    };
+    return this.lessonService.updateLesson(id, body);
   }
 
   @UseGuards(JwtAdminGuard)

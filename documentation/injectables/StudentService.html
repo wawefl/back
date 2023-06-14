@@ -437,7 +437,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>updateStudent(student)</code>
+                    <code>updateStudent(id, student)</code>
                 </td>
             </tr>
 
@@ -464,6 +464,15 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
                                 <tr>
                                     <td>student</td>
 
@@ -523,11 +532,11 @@ export class StudentService {
     return this.prisma.student.create({ data: student });
   }
 
-  async updateStudent(student) {
+  async updateStudent(id, student) {
     return this.prisma.student.update({
       data: student,
       where: {
-        id: student.id,
+        id: id,
       },
     });
   }
