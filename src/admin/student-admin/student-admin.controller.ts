@@ -43,7 +43,13 @@ export class StudentAdminController {
         password: bcrypt.hashSync(body.password),
       };
     }
-    return this.studentService.updateStudent(body);
+    const id = body.id;
+    delete body.id;
+    body = {
+      ...body,
+      grade: { connect: { id: parseInt(body.grade) } },
+    };
+    return this.studentService.updateStudent(id, body);
   }
 
   @UseGuards(JwtAdminGuard)

@@ -2,12 +2,14 @@ import { Injectable } from '@nestjs/common';
 import { StudentService } from './student.service';
 import * as bcrypt from 'bcryptjs';
 import { AdminService } from './admin.service';
+import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class AuthService {
   constructor(
     private studentService: StudentService,
     private adminService: AdminService,
+    private readonly prisma: PrismaService,
   ) {}
 
   async login(

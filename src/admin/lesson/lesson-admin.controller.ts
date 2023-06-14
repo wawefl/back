@@ -33,7 +33,13 @@ export class LessonAdminController {
   @UseGuards(JwtAdminGuard)
   @Put()
   async updateLesson(@Body() body): Promise<any> {
-    return this.lessonService.updateLesson(body);
+    const id = body.id;
+    delete body.id;
+    body = {
+      ...body,
+      grade: { connect: { id: parseInt(body.grade) } },
+    };
+    return this.lessonService.updateLesson(id, body);
   }
 
   @UseGuards(JwtAdminGuard)

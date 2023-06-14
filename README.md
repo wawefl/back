@@ -45,6 +45,12 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+### Get documentation
+
+```bash
+$ npx @compodoc/compodoc -p tsconfig.json -s
+```
+
 ## Test
 
 ```bash

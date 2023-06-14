@@ -26,11 +26,11 @@ export class StudentService {
     return this.prisma.student.create({ data: student });
   }
 
-  async updateStudent(student) {
+  async updateStudent(id, student) {
     return this.prisma.student.update({
       data: student,
       where: {
-        id: student.id,
+        id: id,
       },
     });
   }

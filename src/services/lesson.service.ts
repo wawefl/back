@@ -22,11 +22,11 @@ export class LessonService {
     return this.prisma.lesson.create({ data: lesson });
   }
 
-  async updateLesson(lesson) {
+  async updateLesson(id, lesson) {
     return this.prisma.lesson.update({
       data: lesson,
       where: {
-        id: lesson.id,
+        id: id,
       },
     });
   }

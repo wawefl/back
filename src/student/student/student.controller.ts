@@ -43,7 +43,9 @@ export class StudentController {
         password: bcrypt.hashSync(body.password),
       };
     }
-    return this.studentService.updateStudent(body);
+    const id = body.id;
+    delete body.id;
+    return this.studentService.updateStudent(id, body);
   }
 
   @UseGuards(JwtStudentGuard)

@@ -31,12 +31,6 @@ export class LessonStudentController {
   }
 
   @UseGuards(JwtStudentGuard)
-  @Put()
-  async updateLesson(@Body() body): Promise<any> {
-    return this.lessonService.updateLesson(body);
-  }
-
-  @UseGuards(JwtStudentGuard)
   @Get(':lessonId')
   async getLesson(@Param('lessonId') id: number): Promise<any> {
     return this.lessonService.getLesson(id);
