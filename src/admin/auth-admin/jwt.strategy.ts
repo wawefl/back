@@ -26,7 +26,6 @@ export class JwtAdminStrategy extends PassportStrategy(
   }
 
   async validate(payload) {
-    console.log(payload);
     if (payload) {
       return payload;
     }

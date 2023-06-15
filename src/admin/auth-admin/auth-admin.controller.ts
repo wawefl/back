@@ -31,12 +31,10 @@ export class AuthAdminController {
         req.body.password,
         true,
       );
-      console.log(admin);
 
       const jwtToken = this.getJwtToken(admin);
       this.setTokenCookie(res, jwtToken);
 
-      console.log(jwtToken);
       // return true;
       return { admin: admin, token: jwtToken };
     } catch (error) {

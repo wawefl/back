@@ -30,16 +30,12 @@ export class AuthStudentController {
         req.body.email,
         req.body.password,
       );
-      console.log(student);
 
       const jwtToken = this.getJwtToken(student);
       this.setTokenCookie(res, jwtToken);
 
-      console.log(jwtToken);
-      // return true;
       return { student: student, token: jwtToken };
     } catch (error) {
-      console.log(error);
       throw new UnauthorizedException();
     }
   }
