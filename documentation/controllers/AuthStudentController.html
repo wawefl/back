@@ -152,8 +152,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="72"
-                            class="link-to-prism">src/student/auth/auth-student.controller.ts:72</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/student/auth/auth-student.controller.ts:68</a></div>
                 </td>
             </tr>
 
@@ -322,8 +322,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">src/student/auth/auth-student.controller.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/student/auth/auth-student.controller.ts:59</a></div>
                 </td>
             </tr>
 
@@ -402,8 +402,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="85"
-                            class="link-to-prism">src/student/auth/auth-student.controller.ts:85</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">src/student/auth/auth-student.controller.ts:81</a></div>
                 </td>
             </tr>
 
@@ -471,8 +471,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="76"
-                            class="link-to-prism">src/student/auth/auth-student.controller.ts:76</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/student/auth/auth-student.controller.ts:72</a></div>
                 </td>
             </tr>
 
@@ -563,8 +563,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">src/student/auth/auth-student.controller.ts:49</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/student/auth/auth-student.controller.ts:45</a></div>
                 </td>
             </tr>
 
@@ -659,16 +659,12 @@ export class AuthStudentController {
         req.body.email,
         req.body.password,
       );
-      console.log(student);
 
       const jwtToken &#x3D; this.getJwtToken(student);
       this.setTokenCookie(res, jwtToken);
 
-      console.log(jwtToken);
-      // return true;
       return { student: student, token: jwtToken };
     } catch (error) {
-      console.log(error);
       throw new UnauthorizedException();
     }
   }

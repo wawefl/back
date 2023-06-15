@@ -152,8 +152,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="73"
-                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:73</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:71</a></div>
                 </td>
             </tr>
 
@@ -322,8 +322,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:62</a></div>
                 </td>
             </tr>
 
@@ -402,8 +402,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="86"
-                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:86</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:84</a></div>
                 </td>
             </tr>
 
@@ -471,8 +471,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:75</a></div>
                 </td>
             </tr>
 
@@ -563,8 +563,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/admin/auth-admin/auth-admin.controller.ts:48</a></div>
                 </td>
             </tr>
 
@@ -660,12 +660,10 @@ export class AuthAdminController {
         req.body.password,
         true,
       );
-      console.log(admin);
 
       const jwtToken &#x3D; this.getJwtToken(admin);
       this.setTokenCookie(res, jwtToken);
 
-      console.log(jwtToken);
       // return true;
       return { admin: admin, token: jwtToken };
     } catch (error) {

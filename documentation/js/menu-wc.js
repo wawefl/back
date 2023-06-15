@@ -207,13 +207,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/GradeModule.html" data-type="entity-link" >GradeModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
-                                            'data-bs-target="#controllers-links-module-GradeModule-07d751621821c53ff3e83df49acde119c29cb886448a403ded066277801f16db3d41b33961034991bac1fbd24c415d5c7e93bc441748e102ada1f787f647352a"' : 'data-bs-target="#xs-controllers-links-module-GradeModule-07d751621821c53ff3e83df49acde119c29cb886448a403ded066277801f16db3d41b33961034991bac1fbd24c415d5c7e93bc441748e102ada1f787f647352a"' }>
+                                            'data-bs-target="#controllers-links-module-GradeModule-781a9ee870c612e8adc4cefc643784d87ac577efd3ac6c0f8b430fc9a9f40170b3d82e1b3a49a2803022f970a76a2527491515ce8185a492a4c8a44ee72c9f78"' : 'data-bs-target="#xs-controllers-links-module-GradeModule-781a9ee870c612e8adc4cefc643784d87ac577efd3ac6c0f8b430fc9a9f40170b3d82e1b3a49a2803022f970a76a2527491515ce8185a492a4c8a44ee72c9f78"' }>
                                             <span class="icon ion-md-swap"></span>
                                             <span>Controllers</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-GradeModule-07d751621821c53ff3e83df49acde119c29cb886448a403ded066277801f16db3d41b33961034991bac1fbd24c415d5c7e93bc441748e102ada1f787f647352a"' :
-                                            'id="xs-controllers-links-module-GradeModule-07d751621821c53ff3e83df49acde119c29cb886448a403ded066277801f16db3d41b33961034991bac1fbd24c415d5c7e93bc441748e102ada1f787f647352a"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-GradeModule-781a9ee870c612e8adc4cefc643784d87ac577efd3ac6c0f8b430fc9a9f40170b3d82e1b3a49a2803022f970a76a2527491515ce8185a492a4c8a44ee72c9f78"' :
+                                            'id="xs-controllers-links-module-GradeModule-781a9ee870c612e8adc4cefc643784d87ac577efd3ac6c0f8b430fc9a9f40170b3d82e1b3a49a2803022f970a76a2527491515ce8185a492a4c8a44ee72c9f78"' }>
                                             <li class="link">
                                                 <a href="controllers/GradeController.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >GradeController</a>
                                             </li>
@@ -221,13 +221,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
-                                        'data-bs-target="#injectables-links-module-GradeModule-07d751621821c53ff3e83df49acde119c29cb886448a403ded066277801f16db3d41b33961034991bac1fbd24c415d5c7e93bc441748e102ada1f787f647352a"' : 'data-bs-target="#xs-injectables-links-module-GradeModule-07d751621821c53ff3e83df49acde119c29cb886448a403ded066277801f16db3d41b33961034991bac1fbd24c415d5c7e93bc441748e102ada1f787f647352a"' }>
+                                        'data-bs-target="#injectables-links-module-GradeModule-781a9ee870c612e8adc4cefc643784d87ac577efd3ac6c0f8b430fc9a9f40170b3d82e1b3a49a2803022f970a76a2527491515ce8185a492a4c8a44ee72c9f78"' : 'data-bs-target="#xs-injectables-links-module-GradeModule-781a9ee870c612e8adc4cefc643784d87ac577efd3ac6c0f8b430fc9a9f40170b3d82e1b3a49a2803022f970a76a2527491515ce8185a492a4c8a44ee72c9f78"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-GradeModule-07d751621821c53ff3e83df49acde119c29cb886448a403ded066277801f16db3d41b33961034991bac1fbd24c415d5c7e93bc441748e102ada1f787f647352a"' :
-                                        'id="xs-injectables-links-module-GradeModule-07d751621821c53ff3e83df49acde119c29cb886448a403ded066277801f16db3d41b33961034991bac1fbd24c415d5c7e93bc441748e102ada1f787f647352a"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-GradeModule-781a9ee870c612e8adc4cefc643784d87ac577efd3ac6c0f8b430fc9a9f40170b3d82e1b3a49a2803022f970a76a2527491515ce8185a492a4c8a44ee72c9f78"' :
+                                        'id="xs-injectables-links-module-GradeModule-781a9ee870c612e8adc4cefc643784d87ac577efd3ac6c0f8b430fc9a9f40170b3d82e1b3a49a2803022f970a76a2527491515ce8185a492a4c8a44ee72c9f78"' }>
                                         <li class="link">
                                             <a href="injectables/GradeService.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >GradeService</a>
                                         </li>
@@ -418,9 +418,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
                                 <li class="link">
                                     <a href="injectables/AdminService.html" data-type="entity-link" >AdminService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="injectables/GradeService.html" data-type="entity-link" >GradeService</a>
                                 </li>
                                 <li class="link">
                                     <a href="injectables/JwtAdminGuard.html" data-type="entity-link" >JwtAdminGuard</a>

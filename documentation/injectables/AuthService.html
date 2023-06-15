@@ -110,12 +110,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(studentService: <a href="../injectables/StudentService.html" target="_self">StudentService</a>, adminService: <a href="../injectables/AdminService.html" target="_self">AdminService</a>, prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>)</code>
+<code>constructor(studentService: <a href="../injectables/StudentService.html" target="_self">StudentService</a>, adminService: <a href="../injectables/AdminService.html" target="_self">AdminService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/services/auth.service.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/services/auth.service.ts:7</a></div>
                             </td>
                         </tr>
 
@@ -149,18 +149,6 @@
                                                   
                                                         <td>
                                                                         <code><a href="../injectables/AdminService.html" target="_self" >AdminService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>prisma</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -204,8 +192,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/services/auth.service.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/services/auth.service.ts:13</a></div>
                 </td>
             </tr>
 
@@ -307,8 +295,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/services/auth.service.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/services/auth.service.ts:32</a></div>
                 </td>
             </tr>
 
@@ -378,14 +366,12 @@
 import { StudentService } from &#x27;./student.service&#x27;;
 import * as bcrypt from &#x27;bcryptjs&#x27;;
 import { AdminService } from &#x27;./admin.service&#x27;;
-import { PrismaService } from &#x27;src/prisma/prisma.service&#x27;;
 
 @Injectable()
 export class AuthService {
   constructor(
     private studentService: StudentService,
     private adminService: AdminService,
-    private readonly prisma: PrismaService,
   ) {}
 
   async login(

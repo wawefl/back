@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+End of year project (Webtech n4). Works with backend (default:8700), frontend (default:4350) and mobile app
 
 ## Installation
 
