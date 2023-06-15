@@ -21,7 +21,6 @@ export class AuthStudentController {
 
   @Post('login')
   async loginWithPassword(
-    // @Headers('Authorization') authHeader: string,
     @Res({ passthrough: true }) res: Response,
     @Request() req,
   ): Promise<any> {
@@ -48,6 +47,7 @@ export class AuthStudentController {
   ): Promise<any> {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { exp, iat, ...user } = req.user;
+
     // refresh token
     const newJwtToken = this.getJwtToken(user);
     this.setTokenCookie(res, newJwtToken);
@@ -60,8 +60,6 @@ export class AuthStudentController {
     @Request() req,
     @Res({ passthrough: true }) res: Response,
   ): Promise<void> {
-    // await this.authService.logout(req.user);
-
     this.removeTokenCookie(res);
   }
 
